@@ -23,11 +23,11 @@ repositories {
 }
 
 dependencies {
-    //implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.springframework.session:spring-session-data-redis'
-    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
     implementation 'org.springframework.boot:spring-boot-starter-security'
+
+    implementation 'org.springframework.session:spring-session-core'
+    implementation  'net.spy:spymemcached:2.12.3'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
