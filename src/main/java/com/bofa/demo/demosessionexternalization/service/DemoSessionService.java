@@ -11,7 +11,7 @@ public class DemoSessionService {
     @Cacheable(value = "defaultCache")
     public String getSessionAttribute (){
 
-        System.out.println("*** 3 Session ID: " + this.sessionId);
+        System.out.println("*** From Service, Session ID: " + this.sessionId);
         return this.sessionId;
     }
 

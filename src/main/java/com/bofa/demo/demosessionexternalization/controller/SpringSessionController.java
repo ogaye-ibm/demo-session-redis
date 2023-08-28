@@ -19,21 +19,21 @@ import java.util.List;
 @Controller
 public class SpringSessionController {
 
-	@Autowired
+	//@Autowired
 	DemoSessionService service;
 
+	SpringSessionController (DemoSessionService service) {
+		this.service = service;
+	}
 
 	@GetMapping("/")
 	public String home(Model model, HttpSession session) {
 
-		@SuppressWarnings("unchecked")
+		//@SuppressWarnings("unchecked")
 		List<String> messages = (List<String>) session.getAttribute("MY_SESSION_MESSAGES");
-		System.out.println("*** Session ID: " + session.getId());
+		System.out.println("*** From Controller, setting Session ID: " + session.getId());
 		service.setSessionId (session.getId());
-		System.out.println("*** 2 Session ID: " + service.getSessionAttribute());
-
-
-		Enumeration<String> attributes = session.getAttributeNames();
+		System.out.println("*** From Controller, getting Session ID: " + service.getSessionAttribute());
 
 		if (messages == null) {
 			messages = new ArrayList<>();
@@ -43,10 +43,6 @@ public class SpringSessionController {
 		return "index";
 	}
 
-/*	@Cacheable(value = "defaultCache")
-	public void sessionAttribute (String sessionId){
-		System.out.println("*** 2 Session ID: " + sessionId);
-	}*/
 
 	@PostMapping("/persistMessage")
 	public String persistMessage(@RequestParam("msg") String msg, HttpServletRequest request) {
