@@ -1,4 +1,4 @@
-package com.bofa.demo.demosessionexternalization.service;
+package com.bofa.demo.sessionexternalization.service;
 
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;

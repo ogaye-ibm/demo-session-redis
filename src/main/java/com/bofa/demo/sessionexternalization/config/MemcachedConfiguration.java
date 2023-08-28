@@ -1,6 +1,6 @@
-package com.bofa.demo.demosessionexternalization.config;
+package com.bofa.demo.sessionexternalization.config;
 
-import com.bofa.demo.demosessionexternalization.cache.Memcached;
+import com.bofa.demo.sessionexternalization.cache.Memcached;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.CachingConfigurer;

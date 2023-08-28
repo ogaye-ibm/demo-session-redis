@@ -1,4 +1,4 @@
-package com.bofa.demo.demosessionexternalization.cache;
+package com.bofa.demo.sessionexternalization.cache;
 
 import net.spy.memcached.AddrUtil;
 import net.spy.memcached.ConnectionFactoryBuilder;
